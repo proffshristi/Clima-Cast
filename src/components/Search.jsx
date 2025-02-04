@@ -5,6 +5,7 @@ import TableScroll from "./TableScroll";
 import axios from "axios";
 import { Link, useNavigate } from "react-router-dom";
 import FavTable from "./FavTable";
+import { IoSearch } from "react-icons/io5";
 const Search = () => {
   const navigate = useNavigate();
   const [inputText, setInputText] = useState("");
@@ -63,7 +64,7 @@ const Search = () => {
               type="submit"
               className="hover:scale-90 w-fit transition-all duration-200 bg-richblack-900 border border-richblack-300 rounded-md text-richblack-50  py-2 px-3 hover:text-[rgb(50,253,255)] hover:border-[rgb(50,253,255)]"
             >
-              Search
+              <IoSearch className="  scale-[1.4] transition-all duration-200"/>
             </button>
           </form>
         </div>

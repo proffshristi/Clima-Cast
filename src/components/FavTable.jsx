@@ -1,12 +1,11 @@
-import React, { useContext, useEffect, useState } from "react";
+import React, { useContext } from "react";
 import { Table, Thead, Tbody, Tr, Th, Td } from "react-super-responsive-table";
 import "react-super-responsive-table/dist/SuperResponsiveTableStyle.css";
 import { Link } from "react-router-dom";
 import { AppContext } from "../context/AppContext";
-import { FaSortAmountDownAlt, FaSortAmountUpAlt } from "react-icons/fa";
 const FavTable = () => {
     const {fav} = useContext(AppContext)
-    const { fetchDetails, minTemp, maxTemp, city } = useContext(AppContext);
+    const { fetchDetails,} = useContext(AppContext);
 
     function checkWeather(e) {
       fetchDetails(e.target.innerHTML);
@@ -29,9 +28,7 @@ const FavTable = () => {
             </Tr>
         </Thead>
         {fav.map((i, index) => {
-          {
-            /* const name = replaceSpecialCharacters(i.name); */
-          }
+  
           index++;
           return (
             <Tbody key={i.geoname_id} className="">
